@@ -7,6 +7,8 @@ const app = express();
 // const trains = require("./routes/trains");
 // const users = require("./routes/authRoutes");
 const stockRoutes = require("./routes/stockRoutes");
+const userRoutes = require("./routes/userRoutes");
+
 // const authenticateUser = require("./middleware/authentication");
 const port = 5000;
 const connectDB = require("./db/connect");
@@ -39,9 +41,10 @@ app.get("/", (req, res) => {
 
 // var jsonParser = bodyParser.json();
 
-app.use ("/api/v1/stocks" , stockRoutes );
-app.use ("/api/v1/stocks/add" , stockRoutes );
-
+app.use("/api/v1/stocks", stockRoutes);
+app.use("/api/v1/stocks/add", stockRoutes);
+app.use("/api/v1/", userRoutes);
+app.use("/api/v1/login", userRoutes);
 
 // app.use("api/v1/trains/specific/:id", authenticateUser, trains);
 ///
