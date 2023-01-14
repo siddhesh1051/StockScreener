@@ -42,7 +42,7 @@
 
 .nav-menu-item:hover{
     color: #f0b14f;
-    border-bottom: 15px #f0b14f solid;
+    border-bottom: 10px #f0b14f solid;
     z-index: 10;
     background-color: hsla(40, 23%, 8%);
 }

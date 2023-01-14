@@ -6,7 +6,7 @@ const Navbar = () => {
     <>
       <div className="navbar-container">
             <div className="logo-container">
-                TrueStocker
+                TrueStocker 
             </div>
             <div className="nav-menu">
                 <div className="nav-menu-item">About</div>
