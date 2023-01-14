@@ -1,0 +1,75 @@
+.stocks-outer-container{
+    width: 100vw;
+    height:200vh;
+    background-color: #080705;
+    
+}
+
+
+.stocks-container{
+    width: 90vw;
+    height: 100vh;
+    background-color: #ffffff;
+    margin-left: 4vw;
+    border-radius: 3vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+.stock-info-container{
+    width: 80vw;
+    height: 20vh;
+    background-color: #ffee8f;
+    margin-top: 2vw;
+}
+
+.stock-info-container1{
+    width: 80vw;
+    height: 10vh;
+    background-color: #e90080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stock-info-container2{
+    width: 80vw;
+    height: 10vh;
+    background-color: #00e91f;
+}
+.stock-info-name{
+    width: 40vw;
+    height: 10vh;
+    background-color: #69d177;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stock-name{
+    width: 30vw;
+    height: 10vh;
+    background-color: #69d1b7;
+    margin-left: 1vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.75vw;
+    font-weight: 800;
+}
+.stock-prof{
+    width: 8vh;
+    height: 8vh;
+    border-radius: 50%;
+    background-color: #9169d1;
+    margin-left: 1vw;
+}
+
+
+
+.stock-adv{
+    width: 40vw;
+    height: 10vh;
+    background-color: #02610f;
+}
