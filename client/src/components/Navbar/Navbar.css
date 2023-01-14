@@ -1,4 +1,78 @@
-.outCont{
-    width:100vw;
-    background-color:red;
+.navbar-container{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #080705;
+    overflow: hidden;
+}
+.logo-container{
+    height: 10vh;
+    width : 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2vw;
+    font-weight: 700;
+    color: #f0b14f;
+    
+}
+
+.nav-menu{
+    width: 50vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25vw;
+    font-weight: 500;
+    color: #fff;
+}
+
+.nav-menu-item{
+    width: 10vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-menu-item:hover{
+    color: #f0b14f;
+    border-bottom: 15px #f0b14f solid;
+    z-index: 10;
+    background-color: hsla(40, 23%, 8%);
+}
+.login-menu{
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-prof-pic{
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(141, 141, 141);
+    cursor: pointer;
+}
+
+.login-prof-name{
+    width: 30vh;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.25vw;
+    font-weight: 500;
+    margin-left: 1vw;
+    color: #f0b14f;
 }
