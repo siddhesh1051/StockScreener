@@ -4,22 +4,11 @@ import Chart from 'chart.js/auto';
 import { useState , useEffect } from 'react';
 import { Doughnut , Line } from 'react-chartjs-2';
 
-const Stocks = () => {
-
-
-    var query = window.location.href.split("home/");
-    console.log("query",query[1]);
+const indiStock = () => {
     const [data , setData] = useState();
     const [show , setShow] = useState(false);
-    const [Name, setStockname] = useState(query[1]);
+    const [Name, setStockname] = useState("NSE");
     const [days, setDays] = useState(1234);
-    const [sdata , setSdata] = useState({
-        Open:"",
-        Close:"",
-        High:"",
-        Low:"",
-        Volume:"",
-    });
     // const [isClicked, setIsClicked] = useState(1234);
     // setStockname("ASHOKLEY");
     const newarr = [{}];
@@ -68,11 +57,6 @@ const getStock = async () => {
   setShow(true);
   console.log("chal ja bhai " , show);
 
-//   let a = Math.round(st.Stocks[1234].Open * 100) / 100
-
-  setSdata({ Open : st.Stocks[1234].Open
-    
-    , Close : st.Stocks[1234].Close, High : st.Stocks[1234].High, Low : st.Stocks[1234].Low, Volume : st.Stocks[1234].Volume});
 
 }
   console.log("yeh hai new array " , newarr);
@@ -88,8 +72,6 @@ const getStock = async () => {
       
     // }
 //  detarr = newarr.slice(-1*days);
-                        
-                        // console.log("yeh hai new LOL " , data[1234].Close);
 
 //   console.log("chal ja bhai " , show);
 }
@@ -112,43 +94,41 @@ useEffect(() => { getStock();
                 <div className="s-flex">
                     <div className="s-stock-index-container1 flex">
                         <div className="s-stock-index-logo"></div>
-                        <div className="s-stock-index-name flex">{query[1]}</div>
+                        <div className="s-stock-index-name flex">NIFTY 50 INDEX</div>
                     </div>
                     <div className="s-stock-index-container2 flex">
                         <div className="s-stock-adv flex">See Advanced Chart</div>
                     </div>
                 </div>    
-                {/* {console.log(data[1000].Close)} */}
+                
                 <div className="s-flex">
                     <div className="s-stock-index-container3 flex">
-                        <div className="s-stock-index-val"><span>INR</span> 
-                        {Math.round(sdata.Close * 100) / 100}
-                        </div>
+                        <div className="s-stock-index-val"><span>INR</span> 17956.60</div>
                         <div className="s-stock-index-change">+0.55%</div> 
                     </div>
                     <div className="s-stock-index-container4 flex">
                         <div className="s-stock-index-today">
-                            <div className="s-stock-index-today-val">{Math.round(sdata.Open * 100) / 100}</div>
+                            <div className="s-stock-index-today-val">17930.67</div>
                             <div className="s-stock-index-today-name">OPEN</div>
                         </div>
 
                         <div className="s-stock-index-today">
-                            <div className="s-stock-index-today-val">{Math.round(sdata.Close * 100) / 100}</div>
+                            <div className="s-stock-index-today-val">17930.67</div>
                             <div className="s-stock-index-today-name">CLOSE</div>
                         </div>
 
                         <div className="s-stock-index-today">
-                            <div className="s-stock-index-today-val">{Math.round(sdata.High * 100) / 100}</div>
+                            <div className="s-stock-index-today-val">17930.67</div>
                             <div className="s-stock-index-today-name">HIGH</div>
                         </div>
 
                         <div className="s-stock-index-today">
-                            <div className="s-stock-index-today-val">{Math.round(sdata.Low * 100) / 100}</div>
+                            <div className="s-stock-index-today-val">17930.67</div>
                             <div className="s-stock-index-today-name">LOW</div>
                         </div>
                         
                         <div className="s-stock-index-today">
-                            <div className="s-stock-index-today-val">{Math.round(sdata.Volume * 100) / 100}</div>
+                            <div className="s-stock-index-today-val">17930.67</div>
                             <div className="s-stock-index-today-name">VOLUME</div>
                         </div>
 
@@ -215,4 +195,4 @@ useEffect(() => { getStock();
   )
 }
 
-export default Stocks
+export default indiStock
