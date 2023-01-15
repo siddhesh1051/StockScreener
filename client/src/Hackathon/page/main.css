@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #080705;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-container{
+    width: 20vw;
+    height: 10vh;
+    color:hsl(34, 70%, 66%);
+    font-weight: 800;
+    font-size: 2vw;
+}
+.nav-menu{
+    width: 45vw;
+    height: 10vh;
+    justify-content: flex-start;
+    
+}
+.nav-menu-item{
+    font-size : 1.25vw;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 4vw;
+    
+}
+.nav-login{
+    width: 35vw;
+    height: 10vh;
+}
+
+.nav-login-details{
+    height: 8vh;
+    width: 20vw;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 1.1vw;
+}
+.nav-login-pp{
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+}
+.nav-logout{
+    padding: 1vh 1vw;
+    background-color: hsl(34, 70%, 66%);
+    color: #080705;
+    border-radius: 0.5vw;
+    margin-left: 2vw;
+    font-weight: 600;
+}
+
+.nav-login-name{
+    margin-left: 1vw;
+}
+
+.main-outer-container{
+    width: 100vw;
+    height : 160vh;
+    background-color: #080705;
+}
+.main-container{
+    width: 90vw;
+    height : 150vh;
+    border-radius: 3vw;
+    background-color: rgb(33,31,29);
+    margin-left: 4vw;
+    margin-top:  1.5vw;
+    margin-top:  1.5vw;
+} 
+
+.stock-index-container{
+    width: 80vw;
+    height : 30vh;
+    border-radius: 1vw;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    background-color: hsl(0, 0%, 20%);
+}
+.stock-index-container1{
+    width: 40vw;
+    height : 15vh;
+    border-radius: 1vw;
+}
+.stock-index-logo{
+    width: 10vh;
+    height : 10vh;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 9%);
+}
+.stock-index-name{
+    width: 30vw;
+    height : 15vh;
+    color: #fff;
+    font-size: 2.8vw;
+    font-weight: 600;
+    justify-content: flex-start;
+    margin-left: 2vw;
+    letter-spacing: 0.2vw;
+}
+.stock-index-container2{
+    width: 40vw;
+    height : 15vh;
+    border-radius: 1vw;
+}
+.stock-index-container3{
+    width: 40vw;
+    height : 15vh;
+    border-radius: 1vw;
+    justify-content: flex-start;
+}
+.stock-index-val{
+    font-size : 2vw;
+    font-weight: 500;
+    color:hsl(34, 70%, 66%);
+}
+.stock-index-change{
+    font-size : 2vw;
+    font-weight: 500;
+    color: hsl(150, 71%, 48%);
+    margin-left: 2.5vw;
+}
+.stock-index-container4{
+    width: 40vw;
+    height : 15vh;
+    border-radius: 1vw;
+    justify-content: space-evenly;
+}
+
+.stock-adv{
+    width: 28vw;
+    height: 8vh;
+    background-color: hsl(34, 70%, 66%);
+    font-size: 1.8vw;
+    font-weight: 500;
+    color:hsl(0, 0%, 9%);
+    border-radius: 1vw;
+}
+
+
+span{
+    margin-left: 3vw;
+    margin-right: 1vw;
+    color: aqua;
+}
+
+.stock-index-today{
+    width:7vw;
+    height: 10vh;
+    background-color: hsl(0, 0%, 19%);
+    font-size : 1.2vw;
+    color : #000;
+    border-radius: 0.4vw;
+}
+
+.stock-index-today-val{
+    font-size : 1.35vw;
+    font-weight: 600;
+    color : hsl(214, 100%, 80%);
+    margin-top:1vh;
+    margin-left: 1vh;
+}
+
+.stock-index-today-name{
+    font-size : 1vw;
+    font-weight: 600;
+    color : hsl(150, 71%, 48%);
+    margin-top:1vh;
+    margin-left: 1vh;
+}
+.stock-chart-container{
+    width: 80vw;
+    height : 100vh;
+    border-radius: 1vw;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    background-color: hsl(0, 0%, 20%);
+}
