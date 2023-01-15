@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    background-color: #080705;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-container{
+    width: 20vw;
+    height: 10vh;
+    color:hsl(34, 70%, 66%);
+    font-weight: 800;
+    font-size: 2vw;
+}
+.nav-menu{
+    width: 45vw;
+    height: 10vh;
+    justify-content: flex-start;
+    
+}
+.nav-menu-item{
+    font-size : 1.25vw;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 4vw;
+    
+}
+.nav-login{
+    width: 35vw;
+    height: 10vh;
+}
+
+.nav-login-details{
+    height: 8vh;
+    width: 20vw;
+    justify-content: space-evenly;
+    color: #fff;
+    font-size: 1.1vw;
+}
+.nav-login-pp{
+    height: 6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: rgb(66, 66, 66);
+}
+.nav-logout{
+    padding: 1vh 1vw;
+    background-color: hsl(34, 70%, 66%);
+    color: #080705;
+    border-radius: 0.5vw;
+    margin-left: 2vw;
+    font-weight: 600;
+}
+
+.nav-login-name{
+    margin-left: 1vw;
+}
+
+.main-outer-container{
+    width: 100vw;
+    height : 220vh;
+    background-color: #080705;
+}
+.main-container{
+    width: 90vw;
+    height : 210vh;
+    border-radius: 3vw;
+    background-color: rgb(33,31,29);
+    margin-left: 4vw;
+    margin-top:  1.5vw;
+    margin-top:  1.5vw;
+} 
+
+.stock-index-container{
+    width: 80vw;
+    height : 20vh;
+    margin-left: 5vw;
+    margin-top: 3vw;
+    justify-content: space-evenly;
+}
+
+.stock-index{
+    width: 24vw;
+    height : 20vh;
+    background-color: #2c2c2c;
+    border-radius: 1vw;
+}
+
+.stock-index-logo{
+    width: 12vh;
+    height : 12vh;
+    background-color: rgb(48, 48, 48);
+    
+}
+
+.stock-index-details{
+    width: 15vw;
+    height : 12vh;
+    margin-left: 1vw;
+    color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.stock-index-name{
+    font-size: 1.8vw;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.2vw;
+    margin-bottom: 1vw;
+    overflow-y: hidden;
+}
+.stock-index-values{
+    justify-content: flex-start;
+}
+.stock-index-val{
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: hsl(34, 70%, 66%);
+    letter-spacing: 0.2vw;
+    overflow-y: hidden;
+}
+.stock-index-change{
+    font-size: 1.1vw;
+    font-weight: 500;
+    color: rgb(60, 168, 60);
+    letter-spacing: 0.2vw;
+    margin-left: 1vw;
+    overflow-y: hidden;
+}
+
+.stock-chart-container{
+    width: 86vw;
+    height : 80vh;
+    margin-left: 2vw;
+    margin-top: 3vw;
+    background-color: #2c2c2c;
+    border-radius: 1vw;
+    align-items: flex-end;
+}
+
+.stock-shares-container{
+    width: 86vw;
+    height : 86vh;
+    margin-left: 2vw;
+    margin-top: 3vw;
+}
+.stock-shares-heading{
+    font-size : 2.5vw;
+    font-weight : 600;
+    color: hsl(34, 70%, 66%);
+}
+
+.stock-shares-box{
+    width: 86vw;
+    height: 72vh;
+    margin-top: 1vw;
+}
+
+.stock-shares{
+    width: 86vw;
+    height: 12vh;
+    margin-top: 1vw;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 1vw;
+    color: #fff;
+    font-size: 1.7vw;
+}
+
+.stock-shares-logo{
+    width: 8vh;
+    height: 8vh;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 50%;
+}
+
+.stock-shares-name{
+    width: 40vw;
+    height: 8vh;
+
+    justify-content: flex-start;
+    font-weight: 600;
+    margin-left: 2vw;
+}
+
+.stock-shares-val{
+    width: 20vw;
+    height: 8vh;
+    justify-content: flex-start;
+    color: hsl(34, 70%, 66%);
+
+}
+
+
+.stock-shares-change{
+    width: 15vw;
+    height: 8vh;
+    justify-content: flex-start;
+    color: hsl(120, 47%, 60%);
+}
+
+
+span{
+    margin-right: 1.5vw;
+}
