@@ -13,7 +13,7 @@ const Signup = () => {
   const toast = useToast();
   const navigate = useNavigate();
 
-  const [name, setName] = useState();
+  const [username, setusername] = useState();
   const [email, setEmail] = useState();
   const [confirmpassword, setConfirmpassword] = useState();
   const [password, setPassword] = useState();
@@ -22,7 +22,7 @@ const Signup = () => {
 
   const submitHandler = async () => {
     setPicLoading(true);
-    if (!name || !email || !password || !confirmpassword) {
+    if (!username || !email || !password || !confirmpassword) {
       toast({
         title: "Please Fill all the Feilds",
         status: "warning",
@@ -43,7 +43,7 @@ const Signup = () => {
       });
       return;
     }
-    console.log(name, email, password, pic);
+    console.log(username, email, password, pic);
     try {
       const config = {
         headers: {
@@ -53,7 +53,7 @@ const Signup = () => {
       const { data } = await axios.post(
         "/api/user",
         {
-          name,
+          username,
           email,
           password,
           pic,
@@ -134,10 +134,11 @@ const Signup = () => {
   return (
     <VStack spacing="5px">
       <FormControl id="first-name" isRequired>
-        <FormLabel>Name</FormLabel>
+        <FormLabel>Username</FormLabel>
         <Input
-          placeholder="Enter Your Name"
-          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter Your Username"
+          onChange={(e) => setusername(e.target.value)}
+          focusBorderColor='yellow.400'
         />
       </FormControl>
       <FormControl id="email" isRequired>
@@ -146,6 +147,7 @@ const Signup = () => {
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
+          focusBorderColor='yellow.400'
         />
       </FormControl>
       <FormControl id="password" isRequired>
@@ -155,6 +157,7 @@ const Signup = () => {
             type={show ? "text" : "password"}
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
+            focusBorderColor='yellow.400'
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -170,6 +173,7 @@ const Signup = () => {
             type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
+            focusBorderColor='yellow.400'
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -185,10 +189,11 @@ const Signup = () => {
           p={1.5}
           accept="image/*"
           onChange={(e) => postDetails(e.target.files[0])}
+          focusBorderColor='yellow.400'
         />
       </FormControl>
       <Button
-        colorScheme="blue"
+        colorScheme="yellow"
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}

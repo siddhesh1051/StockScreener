@@ -5,24 +5,24 @@ const Stock = require('../models/stockModel');
 const router = express.Router();
 const csvtojson = require("csvtojson");
 
-router.post('/add', async(req,res)=>{
-    csvtojson()
-    .fromFile("./TATASTEEL.NS.csv")
-    .then(csvData =>{
-        console.log(csvData);
-        Stock.insertMany(csvData).then(function(){
-            console.log("Data inserted")  // Success
-        }).catch(function(error){
-            console.log(error)      // Failure
-        });
-    });
-});
+// router.post('/add', async(req,res)=>{
+//     csvtojson()
+//     .fromFile("./updated_data/ASHOKLEY.csv")
+//     .then(csvData =>{
+//         console.log(csvData);
+//         Stock.insertMany(csvData).then(function(){
+//             console.log("Data inserted")  // Success
+//         }).catch(function(error){
+//             console.log(error)      // Failure
+//         });
+//     });
+// });
 
 router.get('/', async(req,res)=>{
     try {
-        const stocks = await Stock.findOne({Open : "73.55127"});
+        const stocks = await Stock.find({Name : "ASHOKLEY"});
         res.send(stocks);    
-        console.log("YAY");
+        console.log("YAY"); 
     } catch (error) {
      console.log(error);   
     }

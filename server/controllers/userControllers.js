@@ -9,7 +9,7 @@ const generateToken = require("../config/generateToken");
 //   const keyword = req.query.search
 //     ? {
 //         $or: [
-//           { name: { $regex: req.query.search, $options: "i" } },
+//           { username: { $regex: req.query.search, $options: "i" } },
 //           { email: { $regex: req.query.search, $options: "i" } },
 //         ],
 //       }
@@ -23,14 +23,15 @@ const generateToken = require("../config/generateToken");
 //@route           POST /api/user/
 //@access          Public
 const registerUser = asyncHandler(async (req, res) => {
-  const { name, email, password, pic } = req.body;
+  const { username, email, password, pic } = req.body;
 
-  if (!name || !email || !password) {
+  if (!username || !email || !password) {
     res.status(400);
     throw new Error("Please Enter all the Feilds");
   }
 
   const userExists = await User.findOne({ email });
+
 
   if (userExists) {
     res.status(400);
@@ -38,7 +39,7 @@ const registerUser = asyncHandler(async (req, res) => {
   }
 
   const user = await User.create({
-    name,
+    username,
     email,
     password,
     pic,
@@ -47,9 +48,8 @@ const registerUser = asyncHandler(async (req, res) => {
   if (user) {
     res.status(201).json({
       _id: user._id,
-      name: user.name,
+      username: user.username,
       email: user.email,
-      isAdmin: user.isAdmin,
       pic: user.pic,
       token: generateToken(user._id),
     });
@@ -70,7 +70,7 @@ const authUser = asyncHandler(async (req, res) => {
   if (user && (await user.matchPassword(password))) {
     res.json({
       _id: user._id,
-      name: user.name,
+      username: user.username,
       email: user.email,
       pic: user.pic,
       token: generateToken(user._id),

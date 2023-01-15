@@ -78,6 +78,7 @@ const Login = () => {
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
+          focusBorderColor='yellow.400'
         />
       </FormControl>
       <FormControl id="password" isRequired>
@@ -88,6 +89,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
+            focusBorderColor='yellow.400'
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -97,7 +99,7 @@ const Login = () => {
         </InputGroup>
       </FormControl>
       <Button
-        colorScheme="blue"
+        colorScheme="yellow"
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
@@ -106,8 +108,8 @@ const Login = () => {
         Login
       </Button>
       <Button
-        variant="solid"
-        colorScheme="red"
+        variant="outline"
+        colorScheme="orange"
         width="100%"
         onClick={() => {
           setEmail("guest@example.com");

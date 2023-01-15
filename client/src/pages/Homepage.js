@@ -40,7 +40,7 @@ function Homepage() {
         </Text>
       </Box> */}
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px" marginTop="10vh">
-        <Tabs isFitted variant="soft-rounded">
+        <Tabs isFitted variant="soft-rounded" colorScheme='yellow' text="black">
           <TabList mb="1em">
             <Tab>Login</Tab>
             <Tab>Sign Up</Tab>

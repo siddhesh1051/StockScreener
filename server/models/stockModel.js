@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
 const stockSchema = new mongoose.Schema({
+    Name : {
+        type : String,
+    } , 
     Date : {
         type : String,
     } , 
