@@ -23,7 +23,7 @@ app.use(
     origin: "https://stock-flipr.vercel.app",
         // origin: "http://localhost:3000",
 
-    // credentials: true,
+    credentials: true,
   })
 );
 app.use(bodyParser.json());
