@@ -12,6 +12,7 @@ import  Eicher  from "./eicher.webp";
 import  Cipla  from "./cipla.webp";
 import  Reliance  from "./reliance.webp";
 import  Ashok  from "./ashok.webp";
+import  BANK  from "./bank.svg";
 
 
 
@@ -129,19 +130,19 @@ useEffect(() => { getStock();
                     </div>
                 </div>
                 </Link>
-                <Link to="/home/NSE">
+               
                 <div className="stock-index flex">
                     {/* <div className="stock-index-logo"></div> */}
-                    <img src={NSE} alt="NSE_BANK" className='index_log' />
+                    <img src={BANK} alt="NSE_BANK" style={{scale:"0.8", borderRadius:"50%"}} className='index_log' />
                     <div className="stock-index-details flex">
                         <div className="stock-index-name">BANK NIFTY</div>
                         <div className="stock-index-values flex">
-                            <div className="stock-index-val">17950.56</div>
-                            <div className="stock-index-change">+0.55%</div>
+                            <div className="stock-index-val">42167.55</div>
+                        <div className="stock-index-change" style={{color:"red"}}>-0.48%</div>
                         </div>
                     </div>
                 </div>
-                </Link>
+                
 
 
             </div>

@@ -22,37 +22,47 @@ const Navbar = () => {
         </div>
      */}
 
-<div className="navbar flex">
+      <div className="navbar flex">
         <Link to="/home" className="nav-logo-container flex">StockFlipr</Link>
         <div className="nav-menu flex">
-            <div  className="dropdown nav-menu-item">
-            <button class="dropbtn">Stocks 
-      
-    </button>
-    <div class="dropdown-content">
-      <Link to="/home/RELIANCE">Reliance Inc</Link>
-      <Link to="/home/ASHOK">Ashok Leyland</Link>
-      <Link to="/home/TATASTEEL">Tata Steel</Link>
-      <Link to="/home/CIPLA">Cipla</Link>
-      <Link to="/home/EICHERMOT">Eicher Motors</Link>
-    </div>
-            
+          <div className="dropdown nav-menu-item">
+            <button class="dropbtn">Stocks
+
+            </button>
+            <div class="dropdown-content">
+              <Link to="/home/RELIANCE">Reliance Inc</Link>
+              <Link to="/home/ASHOKLEY">Ashok Leyland</Link>
+              <Link to="/home/TATASTEEL">Tata Steel</Link>
+              <Link to="/home/CIPLA">Cipla</Link>
+              <Link to="/home/EICHERMOT">Eicher Motors</Link>
             </div>
-            <Link to="/index" className="nav-menu-item">Index</Link>
-            <Link to="/about" className="nav-menu-item">About</Link>
-            <Link to="/about" className="nav-menu-item">Contact Us</Link>
-            {/* <Link to="/stocks" className="nav-menu-item">Stocks</Link> */}
-            {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
+
+          </div>
+          <div className="dropdown nav-menu-item">
+            <button class="dropbtn">Indices
+
+            </button>
+            <div class="dropdown-content">
+              <Link to="/home/NSE">NSE</Link>
+              <Link to="/home/BSE">BSE</Link>
+            </div>
+
+          </div>
+          {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
+          <Link to="/about" className="nav-menu-item">About</Link>
+          <Link to="/about" className="nav-menu-item">Contact Us</Link>
+          {/* <Link to="/stocks" className="nav-menu-item">Stocks</Link> */}
+          {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
         </div>
         <div className="nav-login flex">
-            <div className="nav-login-details flex">
-                <div className="nav-login-pp"></div>
-                <div className="nav-login-name">Sahil Kangane</div>
-                <Link to="/" className="nav-logout flex">Logout</Link>
-            </div>
+          <div className="nav-login-details flex">
+            <div className="nav-login-pp"></div>
+            <div className="nav-login-name">Sahil Kangane</div>
+            <Link to="/" className="nav-logout flex">Logout</Link>
+          </div>
         </div>
-    </div>
-    
+      </div>
+
     </>
   );
 };

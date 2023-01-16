@@ -2,7 +2,7 @@ import React from 'react'
 import './Stocks.css'
 import Chart from 'chart.js/auto';
 import { useState , useEffect } from 'react';
-import { Doughnut , Line } from 'react-chartjs-2';
+import { Doughnut , Line , Bar } from 'react-chartjs-2';
 import { Spinner } from '@chakra-ui/react'
 import  NSE  from "./NSE.webp";
 import  BSE  from "./BSE.webp";
@@ -17,6 +17,7 @@ const Stocks = () => {
 
     var query = window.location.href.split("home/");
     console.log("query",query[1]);
+    const [adv , setAdv] = useState(false);
     const [data , setData] = useState();
     const [show , setShow] = useState(false);
     const [Name, setStockname] = useState(query[1]);
@@ -104,7 +105,7 @@ const getStock = async () => {
 
 useEffect(() => { getStock();
     // setIsClicked(days);
-    }, [days]);
+    }, [days , query[1]]);
 
     // if(detarr.length > 1){
     //     setShow(true);
@@ -125,7 +126,7 @@ useEffect(() => { getStock();
                         <div className="s-stock-index-name">{query[1]}</div>
                     </div>
                     <div className="s-stock-index-container2 flex">
-                        <div className="s-stock-adv flex">See Advanced Chart</div>
+                        <div className="s-stock-adv flex" onClick={()=>setAdv(!adv)} > {!adv  ? "See Advanced Chart" : "See Basic Chart"} </div>
                     </div>
                 </div>    
                 {/* {console.log(data[1000].Close)} */}
@@ -171,7 +172,7 @@ useEffect(() => { getStock();
             {/* HERE IS MY CHART */}
             {/* <button onClick={getStock}>Click</button> */}
                     {
-                       !show ? <Spinner
+                       (!show) ? <Spinner
                        thickness='4px'
                        speed='0.65s'
                        emptyColor='gray.200'
@@ -179,6 +180,61 @@ useEffect(() => { getStock();
                        size='xl'
                        
                      /> : (
+
+                        adv ?
+                        
+                        <>
+                           <Bar
+            data={{
+              labels: data.map(
+                (item) => item.Date
+               
+              ),
+
+              datasets: [
+                {
+                  data: data.map((item) => [
+                    item.Open,
+                    item.Close,
+                    item.High,
+                    item.Low,
+                  ]),
+                  label: "CandleStick",
+                  borderColor: "#f0b14f",
+                  backgroundColor: ["red", "green"],
+                  // backgroundColor: data.map(
+                  //   (item) => parseInt(item.Close) >= parseInt(item.Open)
+                  // )
+                  //   ? "green"
+                  //   : "red",
+                  // barThickness: 40,
+                },
+                // {
+                //   data: data.map((item) => [item.High, item.Low]),
+                //   label: "Wick",
+                //   // width: "1px",
+                //   backgroundColor: "blue",
+                //   // barThickness: 1,
+                //   barPercentage: 0.2,
+                //   // marginLeft: "-20px",
+                // },
+              ],
+
+              // options: {
+              //   scales: {
+              //     x: {
+              //       stacked: true,
+              //     },
+              //     // y: {
+              //     //   stacked: true,
+              //     // },
+              //   },
+              // },
+            }}
+          />
+                        </>
+                        
+                        :
                         
                         <Line 
                         data = {{
@@ -211,6 +267,8 @@ useEffect(() => { getStock();
                         
                        )
                     }
+
+
                     <div className='days-div'>
 
                         <button className='days-change-btn' key="1234" onClick={()=>setDays(1234)}>5 Years</button>

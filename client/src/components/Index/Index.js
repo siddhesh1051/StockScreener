@@ -128,14 +128,7 @@ const Index = () => {
             data={{
               labels: data.map(
                 (item) => item.Date
-                // {let date = new Date(item.Date);
-                //     // let time =
-                //     // date.getHours() > 12
-                //     //   ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                //     //   : `${date.getHours()}:${date.getMinutes()} AM`;
-                // return date.toLocaleDateString();
-                // // days === 1 ? time :
-                // }
+               
               ),
 
               datasets: [
