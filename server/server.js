@@ -8,6 +8,7 @@ var cors = require("cors");
 const app = express();
 const port = 5000;
 
+const PORT = process.env.PORT || 5000;
 
 require("dotenv").config();
 // connectDB();
@@ -39,8 +40,8 @@ app.use("/api/v1/stocks", stockRoutes);
 const start = async () => {
   try {
     await connectDB(process.env.MONGO_URI);
-    app.listen(port, () => {
-      console.log(`Server running on http://localhost:${port}`);
+    app.listen(PORT, () => {
+      console.log(`${PORT}`);
     });
   } catch (error) {
     console.log(error);
