@@ -1,7 +1,6 @@
 import React from "react";
-import "./Navbar.css"
+import "./Navbar.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 
 const Navbar = () => {
   return (
@@ -23,12 +22,12 @@ const Navbar = () => {
      */}
 
       <div className="navbar flex">
-        <Link to="/home" className="nav-logo-container flex">StockFlipr</Link>
+        <Link to="/home" className="nav-logo-container flex">
+          StockFlipr
+        </Link>
         <div className="nav-menu flex">
           <div className="dropdown nav-menu-item">
-            <button class="dropbtn">Stocks
-
-            </button>
+            <button class="dropbtn">Stocks</button>
             <div class="dropdown-content">
               <Link to="/home/RELIANCE">Reliance Inc</Link>
               <Link to="/home/ASHOKLEY">Ashok Leyland</Link>
@@ -36,17 +35,13 @@ const Navbar = () => {
               <Link to="/home/CIPLA">Cipla</Link>
               <Link to="/home/EICHERMOT">Eicher Motors</Link>
             </div>
-
           </div>
           <div className="dropdown nav-menu-item">
-            <button class="dropbtn">Indices
-
-            </button>
+            <button className="dropbtn">Indices</button>
             <div class="dropdown-content">
               <Link to="/home/NSE">NSE</Link>
               <Link to="/home/BSE">BSE</Link>
             </div>
-
           </div>
           {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
           {/* <Link to="/about" className="nav-menu-item">About</Link>
@@ -58,11 +53,12 @@ const Navbar = () => {
           <div className="nav-login-details flex">
             <div className="nav-login-pp"></div>
             <div className="nav-login-name">Sahil Kangane</div>
-            <Link to="/" className="nav-logout flex">Logout</Link>
+            <Link to="/" className="nav-logout flex">
+              Logout
+            </Link>
           </div>
         </div>
       </div>
-
     </>
   );
 };

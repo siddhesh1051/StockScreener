@@ -83,6 +83,7 @@
 .navbar{
     width: 100vw;
     height: 10vh;
+    /* height: 120px !important; */
     background-color: #080705;
 }
 
@@ -94,10 +95,11 @@
 
 .nav-logo-container{
     width: 20vw;
+    /* background-color: aqua; */
     height: 10vh;
     color:hsl(34, 70%, 66%);
     font-weight: 800;
-    font-size: 2vw;
+    font-size: clamp(0.7rem , 2vw , 2rem) !important;
 }
 .nav-menu{
     width: 45vw;
@@ -160,7 +162,8 @@
   }
   
   .dropdown .dropbtn {
-    /* font-size: 16px;   */
+    font-size: clamp( 0.6rem , 1.4vw , 1.4rem);
+    
     border: none;
     outline: none;
     color: white;
