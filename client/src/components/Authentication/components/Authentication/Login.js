@@ -79,6 +79,7 @@ const Login = () => {
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
           focusBorderColor='yellow.400'
+          borderColor="black"
         />
       </FormControl>
       <FormControl id="password" isRequired>
@@ -89,10 +90,11 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
+            borderColor="black"
             focusBorderColor='yellow.400'
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" bg="#E9E6E3" onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>

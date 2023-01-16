@@ -3,6 +3,14 @@ import './Stocks.css'
 import Chart from 'chart.js/auto';
 import { useState , useEffect } from 'react';
 import { Doughnut , Line } from 'react-chartjs-2';
+import { Spinner } from '@chakra-ui/react'
+import  NSE  from "./NSE.webp";
+import  BSE  from "./BSE.webp";
+import  Tatasteel  from "./tatasteel.webp";
+import  Eicher  from "./eicher.webp";
+import  CIPLA  from "./cipla.webp";
+import  Reliance  from "./reliance.webp";
+import  Ashok  from "./ashok.webp";
 
 const Stocks = () => {
 
@@ -111,8 +119,10 @@ useEffect(() => { getStock();
                 
                 <div className="s-flex">
                     <div className="s-stock-index-container1 flex">
-                        <div className="s-stock-index-logo"></div>
-                        <div className="s-stock-index-name flex">{query[1]}</div>
+                        {/* <div className="s-stock-index-logo"></div> */}
+                        <img src={query[1] === "NSE" ? NSE : query[1] === "BSE" ? BSE : query[1] === "TATASTEEL" ? Tatasteel : query[1] === "EICHERMOT" ? Eicher : query[1] === "CIPLA" ? CIPLA : query[1] === "RELIANCE" ? Reliance : query[1] === "ASHOKLEY" ? Ashok : null} alt="" className='log' />
+                        {/* <img src={a} alt="" className='log' /> */}
+                        <div className="s-stock-index-name">{query[1]}</div>
                     </div>
                     <div className="s-stock-index-container2 flex">
                         <div className="s-stock-adv flex">See Advanced Chart</div>
@@ -161,7 +171,14 @@ useEffect(() => { getStock();
             {/* HERE IS MY CHART */}
             {/* <button onClick={getStock}>Click</button> */}
                     {
-                       !show ? <h1>Loader...</h1> : (
+                       !show ? <Spinner
+                       thickness='4px'
+                       speed='0.65s'
+                       emptyColor='gray.200'
+                       color='yellow.500'
+                       size='xl'
+                       
+                     /> : (
                         
                         <Line 
                         data = {{
@@ -194,7 +211,7 @@ useEffect(() => { getStock();
                         
                        )
                     }
-                    <div>
+                    <div className='days-div'>
 
                         <button className='days-change-btn' key="1234" onClick={()=>setDays(1234)}>5 Years</button>
                         <button className='days-change-btn' key="781" onClick={()=>setDays(781)}>3 Years</button>

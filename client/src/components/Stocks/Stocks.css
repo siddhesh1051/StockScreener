@@ -7,6 +7,12 @@
     scroll-behavior: smooth;
 }
 
+.log{
+    width: 5rem;
+    height: 5rem;
+    margin-left: 2rem;
+}
+
 
 .s-navbar{
     width: 100vw;
@@ -107,12 +113,14 @@
 }
 .s-stock-index-name{
     width: 30vw;
-    height : 15vh;
+    max-height : 15vh;
     color: #fff;
     font-size: 2.8vw;
     font-weight: 600;
     justify-content: flex-start;
-    margin-left: 2vw;
+    align-items: center;
+    margin-left: 3rem;
+    margin-top: 0.6rem;
     letter-spacing: 0.2vw;
 }
 .s-stock-index-container2{
@@ -152,6 +160,7 @@
     font-weight: 500;
     color:hsl(0, 0%, 9%);
     border-radius: 1vw;
+    cursor: pointer;
 }
 
 
@@ -171,7 +180,7 @@ span{
 }
 
 .s-stock-index-today-val{
-    font-size : 1.s-35vw;
+    font-size : 1.35vw;
     font-weight: 600;
     color : hsl(214, 100%, 80%);
     margin-top:1vh;
@@ -204,6 +213,15 @@ span{
     margin-left: 1vw;
     margin-top: 1vh;
     justify-content: center;
+    justify-content: center;
+    align-items: center;
+} */
+/* .days-div{
+    width: 80vw;
+
+    margin-left: 5vw;
+    margin-top: 1vh;
+    justify-content: space-evenly;
     align-items: center;
 } */
 .days-change-btn{
@@ -239,5 +257,29 @@ span{
     background-color: #f0b14f;
     font-size : 1.2rem;
     color : #fff;
+
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px){
+    .s-main-outer-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .s-stock-adv{
+        width: 7rem;
+        height: 1.5rem;
+        font-size: 0.5rem;
+    }
+    .days-change-btn{
+        width: 3rem;
+        height: 1rem;
+        
+        font-size : 0.3rem;
+        
+    }
 
 }

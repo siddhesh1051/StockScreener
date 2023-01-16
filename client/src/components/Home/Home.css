@@ -7,6 +7,15 @@
     scroll-behavior: smooth;
 }
 
+.com_log{
+    width: 4rem;
+    height: 4rem;
+}
+.index_log{
+    width: 6rem;
+    height: 6rem;
+}
+
 
 .navbar{
     width: 100vw;

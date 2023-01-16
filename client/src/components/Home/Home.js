@@ -4,6 +4,14 @@ import './Home.css'
 import Chart from 'chart.js/auto';
 import { useState , useEffect } from 'react';
 import { Doughnut , Line } from 'react-chartjs-2';
+import { Spinner } from '@chakra-ui/react'
+import  NSE  from "./NSE.webp";
+import  BSE  from "./BSE.webp";
+import  Tatasteel  from "./tatasteel.webp";
+import  Eicher  from "./eicher.webp";
+import  Cipla  from "./cipla.webp";
+import  Reliance  from "./reliance.webp";
+import  Ashok  from "./ashok.webp";
 
 
 
@@ -95,9 +103,10 @@ useEffect(() => { getStock();
     <div className="main-outer-container">
         <div className="main-container">
             <div className="stock-index-container flex">
-
+            <Link to="/home/NSE">
                 <div className="stock-index flex">
-                    <div className="stock-index-logo"></div>
+                    {/* <div className="stock-index-logo"></div> */}
+                    <img src={NSE} alt="NSE" className='index_log' />
                     <div className="stock-index-details flex">
                         <div className="stock-index-name">NIFTY 50</div>
                         <div className="stock-index-values flex">
@@ -106,8 +115,11 @@ useEffect(() => { getStock();
                         </div>
                     </div>
                 </div>
+                </Link>
+                <Link to="/home/BSE">
                 <div className="stock-index flex">
-                    <div className="stock-index-logo"></div>
+                    {/* <div className="stock-index-logo"></div> */}
+                    <img src={BSE} alt="BSE" className='index_log' />
                     <div className="stock-index-details flex">
                         <div className="stock-index-name">SENSEX</div>
                         <div className="stock-index-values flex">
@@ -116,23 +128,35 @@ useEffect(() => { getStock();
                         </div>
                     </div>
                 </div>
+                </Link>
+                <Link to="/home/NSE">
                 <div className="stock-index flex">
-                    <div className="stock-index-logo"></div>
+                    {/* <div className="stock-index-logo"></div> */}
+                    <img src={NSE} alt="NSE_BANK" className='index_log' />
                     <div className="stock-index-details flex">
-                        <div className="stock-index-name">NIFTY 50</div>
+                        <div className="stock-index-name">BANK NIFTY</div>
                         <div className="stock-index-values flex">
                             <div className="stock-index-val">17950.56</div>
                             <div className="stock-index-change">+0.55%</div>
                         </div>
                     </div>
                 </div>
+                </Link>
+
 
             </div>
-
+    
             <div className="stock-chart-container flex" id="chartbox">
-
+                
             {
-                       !show ? <h1>Loader...</h1> : (
+                       !show ? <Spinner
+                       thickness='4px'
+                       speed='0.65s'
+                       emptyColor='gray.200'
+                       color='yellow.500'
+                       size='xl'
+                       margin={50}
+                     /> : (
                         
                         <Line 
                         data = {{
@@ -187,7 +211,8 @@ useEffect(() => { getStock();
 
                     <Link to="/home/RELIANCE">
                     <div className="stock-shares flex">
-                        <div className="stock-shares-logo"></div>
+                        {/* <div className="stock-shares-logo"></div> */}
+                        <img src={Reliance} alt="reliance" className='com_log' />
                         <div className="stock-shares-name flex">Reliance Inc</div>
                         <div className="stock-shares-val flex"><span style={{ color:`aqua` }}>INR</span>3125.60</div>
                         <div className="stock-shares-change flex">+2.13%</div>
@@ -195,7 +220,8 @@ useEffect(() => { getStock();
                     </Link>
                     <Link to="/home/ASHOKLEY">
                     <div className="stock-shares flex">
-                        <div className="stock-shares-logo"></div>
+                        {/* <div className="stock-shares-logo"></div> */}
+                        <img src={Ashok} alt="ashok" className='com_log' />
                         <div className="stock-shares-name flex">Ashok Leyland</div>
                         <div className="stock-shares-val flex"><span style={{ color:`aqua` }}>INR</span>725.73</div>
                         <div className="stock-shares-change flex">+0.51%</div>
@@ -203,7 +229,8 @@ useEffect(() => { getStock();
                     </Link>
                     <Link to="/home/TATASTEEL">
                     <div className="stock-shares flex">
-                        <div className="stock-shares-logo"></div>
+                        {/* <div className="stock-shares-logo"></div> */}
+                        <img src={Tatasteel} alt="" className='com_log' />
                         <div className="stock-shares-name flex">Tata Steel</div>
                         <div className="stock-shares-val flex"><span style={{ color:`aqua` }}>INR</span>1125.12</div>
                         <div className="stock-shares-change flex">+1.31%</div>
@@ -211,7 +238,8 @@ useEffect(() => { getStock();
                     </Link>
                     <Link to="/home/CIPLA">
                     <div className="stock-shares flex">
-                        <div className="stock-shares-logo"></div>
+                        {/* <div className="stock-shares-logo"></div> */}
+                        <img src={Cipla} alt="cipla" className='com_log' />
                         <div className="stock-shares-name flex">Cipla</div>
                         <div className="stock-shares-val flex"><span style={{ color:`aqua` }}>INR</span>621.10</div>
                         <div className="stock-shares-change flex">+2.01%</div>
@@ -219,7 +247,8 @@ useEffect(() => { getStock();
                     </Link>
                     <Link to="/home/EICHERMOT">
                     <div className="stock-shares flex">
-                        <div className="stock-shares-logo"></div>
+                        {/* <div className="stock-shares-logo"></div> */}
+                        <img src={Eicher} alt="eicher" className='com_log' />
                         <div className="stock-shares-name flex">Eicher Motors</div>
                         <div className="stock-shares-val flex"><span style={{ color:`aqua` }}>INR</span>312.65</div>
                         <div className="stock-shares-change flex">+0.98%</div>
