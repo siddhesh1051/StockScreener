@@ -129,7 +129,6 @@ useEffect(() => { getStock();
                         <div className="s-stock-adv flex" onClick={()=>setAdv(!adv)} > {!adv  ? "See Advanced Chart" : "See Basic Chart"} </div>
                     </div>
                 </div>    
-                {/* {console.log(data[1000].Close)} */}
                 <div className="s-flex">
                     <div className="s-stock-index-container3 flex">
                         <div className="s-stock-index-val"><span>INR</span> 
@@ -236,39 +235,48 @@ useEffect(() => { getStock();
                         
                         :
                         
-                        <Line 
-                        data = {{
-                            labels: data.map((item) => item.Date
-                            // {let date = new Date(item.Date);
-                            //     // let time =
-                            //     // date.getHours() > 12
-                            //     //   ? `${date.getHours() - 12}:${date.getMinutes()} PM`
-                            //     //   : `${date.getHours()}:${date.getMinutes()} AM`;
-                            // return date.toLocaleDateString();
-                            // // days === 1 ? time :
-                            // }
-                            ),
-    
-                            datasets: [{data: data.map((item) => item.Close)
-                            , label: "Close",
-                            borderColor: "#f0b14f",
-                        }]
-                        
-                    }}
-                        options = {{
-                            elements:{
-                                point:{
-                                    radius: 1
-                                },
-                            },
-                        }}
+                        <><Line
+                      data={{
+                        labels: data.map((item) => item.Date
+                          // {let date = new Date(item.Date);
+                          //     // let time =
+                          //     // date.getHours() > 12
+                          //     //   ? `${date.getHours() - 12}:${date.getMinutes()} PM`
+                          //     //   : `${date.getHours()}:${date.getMinutes()} AM`;
+                          // return date.toLocaleDateString();
+                          // // days === 1 ? time :
+                          // }
+                        ),
 
-                        />
+                        datasets: [{
+                          data: data.map((item) => item.Close),
+                          label: "Close",
+                          borderColor: "#f0b14f",
+                        }]
+                      }}
+                      options={{
+                        responsive: true,
+                        // maintainAspectRatio: false,
+                        elements: {
+                          point: {
+                            radius: 1
+                          },
+                        },
+                      }} /><div className='days-div'>
+
+                        <button className='days-change-btn' key="1234" onClick={() => setDays(1234)}>5 Years</button>
+                        <button className='days-change-btn' key="781" onClick={() => setDays(781)}>3 Years</button>
+                        <button className='days-change-btn' key="260" onClick={() => setDays(260)}>1 Year</button>
+                        <button className='days-change-btn' key="66" onClick={() => setDays(90)}>3 Months</button>
+                        <button className='days-change-btn' key="22" onClick={() => setDays(30)}>1 Month</button>
+                        <button className='days-change-btn' key="7" onClick={() => setDays(14)}>2 Weeks</button>
+
+                      </div></>
                         
                        )
                     }
 
-
+{/* 
                     <div className='days-div'>
 
                         <button className='days-change-btn' key="1234" onClick={()=>setDays(1234)}>5 Years</button>
@@ -278,7 +286,7 @@ useEffect(() => { getStock();
                         <button className='days-change-btn' key="22" onClick={()=>setDays(30)}>1 Month</button>
                         <button className='days-change-btn' key="7" onClick={()=>setDays(14)}>2 Weeks</button>
                         
-                    </div>
+                    </div> */}
                 
             
 

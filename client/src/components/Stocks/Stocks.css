@@ -103,7 +103,7 @@
 .s-stock-index-container1{
     width: 40vw;
     height : 15vh;
-    border-radius: 1vw;
+    border-radius: 10px;
 }
 .s-stock-index-logo{
     width: 10vh;
@@ -131,7 +131,7 @@
 .s-stock-index-container3{
     width: 40vw;
     height : 15vh;
-    border-radius: 1vw;
+    border-radius: 10px;
     justify-content: flex-start;
 }
 .s-stock-index-val{
@@ -197,10 +197,11 @@ span{
 .s-stock-chart-container{
     width: 80vw;
     height : 750px;
-    border-radius: 1vw;
+    border-radius: 10px;
     margin-left: 5vw;
     margin-top: 3vw;
     background-color: hsl(0, 0%, 20%);
+    /* padding: 0.5rem; */
 }
 
 /* .days-change-btn{
@@ -270,9 +271,9 @@ span{
     }
 
     .s-stock-adv{
-        width: 7rem;
-        height: 1.5rem;
-        font-size: 0.5rem;
+        width: 9rem;
+        height: 2rem;
+        font-size: 0.7rem;
     }
     .days-change-btn{
         width: 3rem;
@@ -281,5 +282,79 @@ span{
         font-size : 0.3rem;
         
     }
-
+    .days-change-btn:focus{
+        width: 3rem;
+        height: 1rem;
+        font-size : 0.3rem;
+        
+        
+    }
+    
+    .days-change-btn:hover{
+        width: 3rem;
+        height: 1rem;
+        font-size : 0.3rem;
+    
+    }
+    .log{
+        width: 5rem;
+        height: 5rem;
+        margin-left: 1rem;
+    }
+    .s-stock-index-name{
+        width: 30vw;
+        max-height : 15vh;
+        
+        font-size:0.6rem;
+        font-weight: 600;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 1rem;
+        margin-top: 0.2rem;
+        letter-spacing: 0.2vw;
+    }
+    .s-stock-index-container1{
+        width: 40vw;
+        height : 3rem;
+        
+    }
+    .s-stock-chart-container{
+        width: 80vw;
+        height : 300px;
+       
+    }
+    .s-stock-index-container3{
+        width: 30vw;
+        height : 3rem;
+        border-radius: 10px;
+        justify-content: flex-start;
+    }
+    .s-stock-index-val{
+        font-size : 0.7rem;
+        font-weight: 400;
+    }
+    .s-stock-index-change{
+        font-size : 0.5rem;
+        font-weight: 300;
+        margin-left: 1rem;
+    }
+    .s-stock-index-today{
+        width:10vw;
+        height: 2rem;
+        background-color: hsl(0, 0%, 19%);
+        font-size : 1.2vw;
+        color : #000;
+        border-radius: 0.4vw;
+    }
+    .s-stock-index-container4{
+        width: 40vw;
+        height : 3rem;
+        border-radius: 10px;
+    }
+    .s-stock-index-container{
+        width: 80vw;
+        height : 25vh;
+        border-radius: 10px;
+       
+    }
 }

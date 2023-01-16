@@ -51,8 +51,9 @@ const Navbar = () => {
         </div>
         <div className="nav-login flex">
           <div className="nav-login-details flex">
-            <div className="nav-login-pp"></div>
-            <div className="nav-login-name">Sahil Kangane</div>
+            {/* <div className="nav-login-pp"></div> */}
+            <img src="https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg" alt="Profile_pic" className="profile_pic"/>
+            <div className="nav-login-name">Warren Buffet</div>
             <Link to="/" className="nav-logout flex">
               Logout
             </Link>
