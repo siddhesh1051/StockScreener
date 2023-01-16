@@ -20,8 +20,10 @@ app.use(express.json());
 // app.use(cors());
 app.use(
   cors({
-    origin: "https://stock-flipr.vercel.app/",
-    credentials: true,
+    origin: "https://stock-flipr.vercel.app",
+        // origin: "http://localhost:3000",
+
+    // credentials: true,
   })
 );
 app.use(bodyParser.json());
