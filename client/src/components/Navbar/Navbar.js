@@ -49,8 +49,8 @@ const Navbar = () => {
 
           </div>
           {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
-          <Link to="/about" className="nav-menu-item">About</Link>
-          <Link to="/about" className="nav-menu-item">Contact Us</Link>
+          {/* <Link to="/about" className="nav-menu-item">About</Link>
+          <Link to="/about" className="nav-menu-item">Contact Us</Link> */}
           {/* <Link to="/stocks" className="nav-menu-item">Stocks</Link> */}
           {/* <Link to="/index" className="nav-menu-item">Index</Link> */}
         </div>
