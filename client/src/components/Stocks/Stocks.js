@@ -262,19 +262,20 @@ useEffect(() => { getStock();
                             radius: 1
                           },
                         },
-                      }} /><div className='days-div'>
-
-                        <button className='days-change-btn' key="1234" onClick={() => setDays(1234)}>5 Years</button>
-                        <button className='days-change-btn' key="781" onClick={() => setDays(781)}>3 Years</button>
-                        <button className='days-change-btn' key="260" onClick={() => setDays(260)}>1 Year</button>
-                        <button className='days-change-btn' key="66" onClick={() => setDays(90)}>3 Months</button>
-                        <button className='days-change-btn' key="22" onClick={() => setDays(30)}>1 Month</button>
-                        <button className='days-change-btn' key="7" onClick={() => setDays(14)}>2 Weeks</button>
-
-                      </div></>
+                      }} /></>
                         
                        )
                     }
+                    <div className='days-div'>
+
+<button className='days-change-btn' key="1234" onClick={() => setDays(1234)}>5 Years</button>
+<button className='days-change-btn' key="781" onClick={() => setDays(781)}>3 Years</button>
+<button className='days-change-btn' key="260" onClick={() => setDays(260)}>1 Year</button>
+<button className='days-change-btn' key="66" onClick={() => setDays(90)}>3 Months</button>
+<button className='days-change-btn' key="22" onClick={() => setDays(30)}>1 Month</button>
+<button className='days-change-btn' key="7" onClick={() => setDays(14)}>2 Weeks</button>
+
+</div>
 
 {/* 
                     <div className='days-div'>
