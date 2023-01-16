@@ -45,7 +45,7 @@ const getStock = async () => {
     console.log("stockname")
     console.log(submitValues);
     const response = await fetch(
-        "http://localhost:5000/api/v1/stocks/",
+        "https://stockscreener-production.up.railway.app/api/v1/stocks/",
         {
           method: "POST",
           credentials: "include",

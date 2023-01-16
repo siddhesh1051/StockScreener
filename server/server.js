@@ -32,6 +32,10 @@ app.get('/', (req, res) => {
     res.send('api running!');
 });
 
+app.get('/api/u', (req, res) => {
+    res.send('api---u---!');
+});
+
 app.use('/api/user',userRoutes)
 
 

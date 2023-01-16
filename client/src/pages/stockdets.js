@@ -5,7 +5,7 @@ const stockdets = () => {
   return (
     <>
     <div className="outercont">
-    SAHIL LOLER
+    
     </div>
     </>
   )
