@@ -20,7 +20,7 @@ app.use(express.json());
 // app.use(cors());
 app.use(
   cors({
-    origin: "https://stockscreener-production.up.railway.app",
+    origin: "https://stock-flipr.vercel.app",
         // origin: "http://localhost:3000",
 
     credentials: true,
